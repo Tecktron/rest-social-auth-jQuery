@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Search API</title>
+<script src="jquery.js"></script>
+<script src="rest-social-auth.js"></script>
+</head>
+<body>
+<div id="hello">Hello</div>
+<div><input type="button" id="login" value="Login with google"></div>
+<script type="text/javascript">
+$(function() {
+    $('#login').restSocialAuthLogin({
+        provider: 'google',
+        redirect_uri: 'http://localhost/',
+        // The client_id needs to matech that in the backend.
+        client_id: '328415496229-h8uif1mqbs15pnh0v3suegp7ftfm7sv6.apps.googleusercontent.com',
+        scope: ['username', 'email'],
+        backend_uri: 'http://localhost:8000/login/social/jwt_user/google-oauth2',
+        success: function(data) {
+            if (data.token) {
+                console.log(data.token);
+            }
+            if (data.username) {
+                $('#hello').html('Hello ' + data.username);
+            } else {
+                $('#hello').html('Hello logged in user');
+            }
+        },
+        fail: function() {
+            console.log('failed login');
+        }
+    });
+
+});
+
+</script>
+</body>
+</html>
