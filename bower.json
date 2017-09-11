@@ -1,22 +1,23 @@
 {
-  "name": "jquery-dropSelect",
+  "name": "rest-social-auth-jQuery",
   "main": [
-    "dropSelect.js"
+    "rest-social-auth.js"
   ],
-  "homepage": "https://hinstitute.github.io/dropSelect/",
+  "homepage": "https://github.com/Tecktron/rest-social-auth-jQuery",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hinstitute/dropSelect.git"
+    "url": "git://github.com/Tecktron/rest-social-auth-jQuery.git"
   },
   "authors": [
-    {"name": "Craig Holden"},
-    {"name": "Harmony Institute", "homepage": "http://harmony-institute.org"}
+    {"name": "Craig Holden"},    
   ],
-  "description": "A CSS 3/jQuery plugin for making a div based dropdown select box.",
+  "description": "A jQuery plugin for REST OAUTH",
   "keywords": [
-    "select",
-    "dropdown",
-    "dropselect"
+    "oauth",
+    "jquery",
+    "oauth2",
+    "login",
+    "social"
   ],
   "license": "MIT",
   "ignore": [
@@ -24,8 +25,7 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests",
-    "demo.html",
+    "tests",    
     ".git*"
   ],
   "dependencies": { "jquery": "latest" }
